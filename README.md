@@ -1,6 +1,8 @@
-# app
+# Vue3Example
+ a vue-cli example,contain Vue-Cli, ElementUI, TailWindCss, Axios and lots of things.
 
 ## Project setup
+
 ```
 npm install
 ```
@@ -11,6 +13,7 @@ npm run serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 npm run build
 ```
