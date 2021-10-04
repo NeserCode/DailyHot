@@ -1,36 +1,56 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'root',
+    redirect: 'home'
+  },
+  {
+    path: '/home',
+    name: 'home',
     component: Home
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'about',
     component: () => import('../views/About.vue')
   },
   {
     path: '/trans',
-    name: 'Trans',
+    name: 'trans',
     component: () => import('../views/Trans.vue')
   },
   {
-    path: '/searchForm',
-    name: 'SearchForm',
-    component: () => import('../views/SearchForm.vue')
+    path: '/searchWeiboForm',
+    name: 'searchWeiboForm',
+    component: () => import('../views/SearchWeiboForm.vue')
+  },
+  {
+    path: '/searchZhihuForm',
+    name: 'searchZhihuForm',
+    component: () => import('../views/SearchZhihuForm.vue')
+  },
+  {
+    path: '/searchDouyinForm',
+    name: 'searchDouyinForm',
+    component: () => import('../views/SearchDouyinForm.vue')
   },
   {
     path: '/class',
-    name: 'Class',
+    name: 'class',
     component: () => import('../views/Class.vue')
+  },
+  {
+    path: '/game',
+    name: 'game',
+    component: () => import('../views/Game.vue')
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes
 })
 

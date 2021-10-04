@@ -4,6 +4,10 @@
     <div class="usernameDiv">
       <span class="usernameSpan">{{ N_username }}</span>
       <i @click="handleNameChange()" class="el-icon-edit"></i>
+      <div class="infomation">
+        <span>QQ</span><span>[ Ej Fdhcfc ]</span>
+        <span>Email</span><span>[ 140519051803150405 @0713010912.031513 ]</span>
+      </div>
     </div>
   </div>
   <!-- AvatarChange -->
@@ -104,9 +108,9 @@ export default {
       checkImgExists(this.setImageUrl)
         .then(() => {
           if (this.getPicMesssage == "修改") {
-            localStorage.setItem("imgSrc",this.setImageUrl);
+            localStorage.setItem("imgSrc", this.setImageUrl);
             this.N_imageUrl = this.setImageUrl;
-            this.$emit("message",this.setImageUrl);
+            this.$emit("message", this.setImageUrl);
             this.setImageUrl = "";
             this.isDialogShow = !this.isDialogShow;
             this.$message.success("修改成功");
@@ -157,6 +161,12 @@ export default {
 }
 .getPicResetBtn {
   @apply inline-block;
+}
+.infomation {
+  @apply w-80 h-32 mt-48 mx-auto text-center text-gray-500;
+}
+.infomation span{
+  @apply w-64 inline-block select-text;
 }
 </style>
 

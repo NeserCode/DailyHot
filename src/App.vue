@@ -1,24 +1,19 @@
 <template>
-  <el-menu
-    :default-active="activeIndex"
-    class="el-menu-demo"
-    mode="horizontal"
-    @select="handleSelect"
-  >
-    <el-menu-item index="1">主页</el-menu-item>
+  <el-menu :default-active="$route.name" mode="horizontal" router>
+    <el-menu-item index="home">一言</el-menu-item>
     <el-submenu index="2" class="elSubMenu">
       <template #title>发现</template>
-      <el-menu-item index="2-1"> 课表编辑 </el-menu-item>
-      <el-menu-item index="2-2"> 微博热搜排行榜 </el-menu-item>
-      <el-menu-item index="2-3">加密码转换</el-menu-item>
+      <el-menu-item index="class"> 数据库交互 </el-menu-item>
+      <el-menu-item index="game"> 游戏推荐 </el-menu-item>
+      <el-menu-item index="trans"> 加密转换 </el-menu-item>
       <el-submenu index="2-4">
-        <template #title>选项4</template>
-        <el-menu-item index="2-4-1">选项1</el-menu-item>
-        <el-menu-item index="2-4-2">选项2</el-menu-item>
-        <el-menu-item index="2-4-3">选项3</el-menu-item>
+        <template #title>热搜排行榜</template>
+        <el-menu-item index="searchWeiboForm"> 微博热搜 </el-menu-item>
+        <el-menu-item index="searchZhihuForm"> 知乎热搜 </el-menu-item>
+        <el-menu-item index="searchDouyinForm"> 抖音热搜 </el-menu-item>
       </el-submenu>
     </el-submenu>
-    <el-menu-item index="3">关于</el-menu-item>
+    <el-menu-item index="about">关于</el-menu-item>
     <el-avatar
       @click="handleAvatar()"
       :src="handleAvatarUrl"
@@ -28,10 +23,8 @@
   <el-drawer v-model="isAvatarDrawer" :with-header="isAvatarDrawerHead">
     <User @message="getImageUrl" :username="userInfoUserName"></User>
   </el-drawer>
-  <div id="Banner"></div>
-  <el-scrollbar>
-    <router-view />
-  </el-scrollbar>
+
+  <router-view />
 </template>
 
 <script>
@@ -66,18 +59,17 @@ function getCookie(name) {
   return false;
 }
 
-window.onload = () => {
-  if (!getCookie("Token")) {
-    localStorage.clear();
-  }
-  setInfo("isTest", false);
-};
-
 import User from "@/components/User.vue";
 
 export default {
   components: {
     User,
+  },
+  mounted() {
+    if (!getCookie("Token")) {
+      localStorage.clear();
+    }
+    setInfo("isTest", false);
   },
   data() {
     return {
@@ -89,35 +81,9 @@ export default {
         ? localStorage.getItem("imgSrc")
         : "http://localhost/Images/q.jpg",
       userInfoUserName: "NeserCode",
-      imgUrlApi: "https://tenapi.cn/bing/",
     };
   },
   methods: {
-    handleSelect: function (key) {
-      let location = "/";
-      // let location = key == "3" ? "/about" : "/";
-      switch (key) {
-        case "3":
-          location = "/about";
-          this.activeIndex = "3";
-          break;
-        case "2-1":
-          location = "/class";
-          this.activeIndex = "2-1";
-          break;
-        case "2-2":
-          location = "/searchForm";
-          this.activeIndex = "2-2";
-          break;
-        case "2-3":
-          location = "/trans";
-          this.activeIndex = "2-3";
-          break;
-        default:
-          break;
-      }
-      this.$router.replace(location);
-    },
     handleAvatar: function () {
       this.isAvatarDrawer = true;
       // if (localStorage.getItem("isTest") == "true") {
@@ -143,5 +109,12 @@ export default {
 }
 .el-avatar img {
   @apply h-9 border-gray-400 border rounded-full;
+}
+</style>
+
+<style scoped>
+.el-menu {
+  position: sticky;
+  top: 0;
 }
 </style>

@@ -8,5 +8,6 @@ import axios from 'axios'
 
 const app = createApp(App)
 app.use(ElementPlus)
+
 app.use(router).mount('#app')
 app.config.globalProperties.$axios = axios;
