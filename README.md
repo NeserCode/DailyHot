@@ -8,6 +8,7 @@ npm install
 ```
 
 ### Compiles and hot-reloads for development
+- Tips: to run all function, you need repair your MysqlDatabase acount and password, and SQL file will be './'.
 ```
 npm run serve
 ```
@@ -17,11 +18,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
