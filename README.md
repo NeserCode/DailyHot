@@ -8,7 +8,7 @@ npm install
 ```
 
 ### Compiles and hot-reloads for development
-- Tips: to run all function, you need repair your MysqlDatabase acount and password, and SQL file will be './'.
+- Tips : to run all function, you need repair your MysqlDatabase acount and password in './server/db.js', and SQL file will be './'.
 ```
 npm run serve
 ```
