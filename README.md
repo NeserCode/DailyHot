@@ -1,6 +1,6 @@
 # Vue3Example
  a vue-cli example,contain Vue-Cli, ElementUI, TailWindCss, Axios and lots of things.
-
+ - View <a href="https://github.com/NeserCode/Vue_2_example/dist/">Here</a>
 ## Project setup
 
 ```
