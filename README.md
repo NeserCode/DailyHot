@@ -1,6 +1,6 @@
-# Vue2Example
+# Daily hot
  a vue-cli example,contain Vue-Cli, ElementUI, TailWindCss, Axios and lots of things.
- - View <a href="https://nesercode.github.io/Vue_2_example/">Here</a>
+ - View <a href="https://nesercode.github.io/">Here</a>
 ## Project setup
 
 ```
