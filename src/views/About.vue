@@ -183,7 +183,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .mainAboutFlex {
   @apply h-full w-1/2 mx-auto mt-8 py-16 mb-4 bg-white;
 }
@@ -216,7 +216,7 @@ export default {
 </style>
 
 <style scoped>
-/deep/.el-icon-info {
+:deep(.el-icon-info) {
   font-family: "Lucida Console" sans-serif;
   color: cadetblue;
 }

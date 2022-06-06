@@ -195,7 +195,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 #searchForm {
   @apply h-full w-screen border-r border-gray-300;
 }

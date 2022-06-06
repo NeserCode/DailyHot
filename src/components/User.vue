@@ -142,7 +142,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .btns {
   @apply w-full text-center;
 }
