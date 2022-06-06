@@ -1,6 +1,6 @@
 # Daily hot
  A vue-cli example,contain Vue-Cli, ElementUI, TailWindCss, Axios and lots of things.
- - View [Here](https://nesercode.github.io/dailyHot/)
+ - View [Here](https://nesercode.github.io/DailyHot/)
 ## Project setup
 
 ```
