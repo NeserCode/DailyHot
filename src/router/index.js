@@ -1,16 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
 
 const routes = [
   {
     path: '/',
     name: 'root',
-    redirect: 'home'
-  },
-  {
-    path: '/home',
-    name: 'home',
-    component: Home
+    redirect: 'searchWeiboForm'
   },
   {
     path: '/about',
@@ -36,16 +30,6 @@ const routes = [
     path: '/searchDouyinForm',
     name: 'searchDouyinForm',
     component: () => import('../views/SearchDouyinForm.vue')
-  },
-  {
-    path: '/class',
-    name: 'class',
-    component: () => import('../views/Class.vue')
-  },
-  {
-    path: '/game',
-    name: 'game',
-    component: () => import('../views/Game.vue')
   }
 ]
 

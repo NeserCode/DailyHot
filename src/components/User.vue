@@ -5,8 +5,8 @@
       <span class="usernameSpan">{{ N_username }}</span>
       <i @click="handleNameChange()" class="el-icon-edit"></i>
       <div class="infomation">
-        <span>QQ</span><span>[ Ej Fdhcfc ]</span>
-        <span>Email</span><span>[ 140519051803150405 @0713010912.031513 ]</span>
+        <span>QQ</span><span>[ Ej Fdhcfc ]</span> <span>Email</span
+        ><span>[ 140519051803150405 @0713010912.031513 ]</span>
       </div>
     </div>
   </div>
@@ -165,7 +165,7 @@ export default {
 .infomation {
   @apply w-80 h-32 mt-48 mx-auto text-center text-gray-500;
 }
-.infomation span{
+.infomation span {
   @apply w-64 inline-block select-text;
 }
 </style>

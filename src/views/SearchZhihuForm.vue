@@ -105,6 +105,7 @@ export default {
     var timeSetBefore = new Date();
 
     // clearInterval(this.intervalQueue[0]);
+    localStorage.clear();
     this.animateKeyword(this.intervalQueue);
     this.timeSet.date = timeSetBefore.toLocaleDateString();
 

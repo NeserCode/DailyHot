@@ -9,10 +9,8 @@
           <img class="avatarImage" :src="item.avatar" />
           <span class="titleArea">{{ item.title }}</span
           ><br />
-          <span class="nameArea"
-            >{{ item.name }}
-            <i @click="getLinkAct(item.website)" class="el-icon-link">
-            </i> </span
+          <el-link class="nameArea" target="viewBox" :href="item.website"
+            >{{ item.name }} <i class="el-icon-link"> </i> </el-link
           ><br />
           <span class="mottoArea">“ {{ item.motto }} ”</span>
         </div>
@@ -66,9 +64,9 @@ export default {
         {
           name: "NeserCode",
           title: "本例作者",
-          website: "https://nesercode.top",
+          website: "https://github.com/NeserCode",
           motto: "没有人能学完所有知识，这算是常识",
-          avatar: require("../../src/assets/q.jpg"),
+          avatar: "https://tenapi.cn/qqimg/?qq=510648363",
         },
         {
           name: "VSCode",

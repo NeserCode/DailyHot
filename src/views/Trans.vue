@@ -36,9 +36,10 @@
         <el-collapse-item title="什么是加密" name="1">
           <div class="innerText">
             加密，是以某种特殊的算法改变原有的信息数据，使得未授权的用户即使获得了已加密的信息，但因不知解密的方法，仍然无法了解信息的内容。
-          </div><br>
+          </div>
+          <br />
           <el-link
-            href="https://baike.baidu.com/item/%E5%8A%A0%E5%AF%86/752748"
+            href="https://baike.baidu.com/item/加密/752748"
             target="viewBox"
             type="primary"
             >详情见百度百科 [加密] 词条</el-link
@@ -48,7 +49,9 @@
           <div class="innerText">
             简单密码加密是指以较为简单的明密文对应关系作为主要加密手段的加密方法。例如著名的凯撒加密，是将26个英文字母按一定偏移量的关系进行一一关联并转换密文为明文，对这种加密方法进行暴力破解的次数为26的阶乘减一。
           </div>
-          <div class="innerText">本例中讨论的数英加密及英数加密均未设置加密偏移量，不具有一定的加密效能。</div>
+          <div class="innerText">
+            本例中讨论的数英加密及英数加密均未设置加密偏移量，不具有一定的加密效能。
+          </div>
         </el-collapse-item>
       </el-collapse>
     </div>
@@ -188,7 +191,6 @@ export default {
             k++;
           }
         }
-        console.log(NumberX.join(","));
         this.transValue = NumberRe.join("");
       }
     },
@@ -196,7 +198,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 #input {
   @apply w-1/3 mx-auto pt-12;
 }
@@ -213,13 +215,13 @@ export default {
 .innerText {
   @apply text-left;
 }
-/deep/ .passWord .el-input-group__prepend {
+:deep(.passWord .el-input-group__prepend) {
   @apply w-56;
 }
-/deep/ .passWord {
+:deep(.passWord) {
   @apply w-full;
 }
-/deep/ .el-select {
+:deep(.el-select) {
   @apply w-44 ml-0;
 }
 </style>
